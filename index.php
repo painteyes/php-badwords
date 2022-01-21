@@ -15,11 +15,11 @@
         // Crea una variabile con la lunghezza del paragrafo
         $explicit_text_length = strlen($explicit_text);
 
-        // Una parola da censurare viene passata dall'utente tramite parametro GET
-        $_GET['dolor'];
+        // Crea una parola da censurare viene passata dall'utente tramite parametro GET
+        $bad_word = $_GET['bad_word'];
 
         // Crea una variabile con il paragrafo di testo censurato
-        $censored_text = str_replace('dolor', '***', $explicit_text);
+        $censored_text = str_replace($bad_word, '***', $explicit_text);
         // Crea una variabile con la lunghezza del paragrafo censurato
         $censored_text_length = strlen($censored_text);
     ?>
